@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(248, 245, 245);
+    height: 100vh;
+}
+
+.main_box {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    gap: 5px;
+}
+
+.game_box {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(248, 245, 245);
+}
+
+.guide_box {
+    height: 100%;
+    min-width: 260px;
+    max-width: 260px;
+    background-color: white;
+    transition: width 0.5s;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.info_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: -240px;
+    height: 100%;
+    width: 240px;
+    background-color: white;
+    overflow: auto;
+    scrollbar-width: none;
+    transition: right 0.5s;
+}
+
+.list-group li {
+    height: 56px;
+    transition: background-color 0.5s;
+}
+
+.list-group li:hover {
+    background-color: rgb(248, 245, 245);
+    cursor: pointer;
+}
+
+.list-group-item {
+    color: #3e71a4;
+    line-height: 42px;
+}
+
+.bi-chevron-double-right {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.5s;
+}
+
+.bi-chevron-double-right:hover {
+    right: 18px;
+}
+
+.picture {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+}
+
+.infoHead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.info_box ul li {
+    transition: height 0.5s;
+}
+
+.getScore,
+.getRoute {
+    font-size: 12px;
+}
+
+.guide_box .list-group li:nth-child(7) {
+    height: 95px;
+    position: relative;
+}
+
+line,
+#pot {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* #newPot {
+    opacity: 0;
+    transition: opacity 0.5s;
+} */
+
+#showResult {
+    width: 120px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #03bcf4;
+}
+
+.resultItem p {
+    transition: background-color 0.5s;
+    font-size: 12px;
+    line-height: 15px;
+    height: 15px;
+    position: relative;
+    margin-left: 10px;
+}

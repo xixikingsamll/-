@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多边形游戏</title>
+    <link href="JS/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS/game.css">
+</head>
+
+<body>
+    <header class="container-fluid bg-info text-white text-center p-3 shadow">多边形游戏</header>
+    <div class="main_box">
+
+        <!-- 功能栏区域 -->
+        <div class="guide_box shadow">
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    <span>
+                        <button class="btn btn-light info_button" type="button" data-bs-toggle="collapse"
+                            style="float: right;border: 1px solid #c2bbbb;width: 60px;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16" style="transition: transform 0.5s;">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg></button>
+                    </span>
+                </li>
+
+                <!-- 游戏规则栏 -->
+                <div class="list-group-item accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-controller" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z" />
+                                    <path
+                                        d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z" />
+                                </svg>&nbsp;&nbsp;游戏规则
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p style="font-size: 12px;width: 100%;text-align: left;">
+                                    &nbsp;&nbsp;游戏开始时，根据系统生成的多边形，玩家选择<strong style="color: red;">第一条边</strong>进行<strong
+                                        style="color: red;">删除</strong>，之后再依次选择<strong
+                                        style="color:red">边</strong>进行<strong
+                                        style="color:red">删除</strong>，根据边上的运算符号计算两个节点的值，随后生成一个新的节点，直到所有边都消除。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手动生成功能 -->
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path
+                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                    </svg><button type="button" class="btn btn-primary" data-bs-target="#exampleModal"
+                        data-bs-whatever="@getbootstrap" data-bs-toggle="modal" style="display: none;"
+                        id="random">手动生成</button>
+                    <label for="random"
+                        id="human">&nbsp;手动生成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </li>
+
+                <!-- 随机生成功能 -->
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-magic" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z" />
+                    </svg><button type="button" class="btn btn-primary" data-bs-target="#exampleModal"
+                        data-bs-whatever="@getbootstrap" data-bs-toggle="modal" style="display: none;"
+                        id="random">随机生成</button>
+                    <label for="random"
+                        id="machine">&nbsp;随机生成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">请输入随机节点的数量和数值范围</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="humanForm">
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label"
+                                                style="margin-bottom: 10px;">节点个数：</label>
+                                            <input type="text" class="form-control randomNum" id="recipient-name"
+                                                placeholder="2-10个">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label"
+                                                style="margin-bottom: 10px;">节点最小值：</label>
+                                            <input type="text" class="form-control randomMin" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label"
+                                                style="margin-bottom: 10px;">节点最大值：</label>
+                                            <input type="text" class="form-control randomMax" id="recipient-name">
+                                        </div>
+                                    </form>
+                                    <form class="machineForm">
+                                        <div class="mb-3 potNum">
+                                            <label for="recipient-name" class="col-form-label"
+                                                style="margin-bottom: 10px;">您想创建多少个节点？</label>
+                                            <input type="text" class="form-control potNumValue" id="recipient-name">
+                                            <button type="button" class="btn btn-primary"
+                                                id="beginBuildPots">开始创建</button>
+                                        </div>
+
+                                        <div class="mb-3 aboutPot">
+                                            <label for="recipient-name" class="col-form-label"
+                                                style="margin-bottom: 10px;">节点1</label>
+                                            <input type="text" class="form-control aboutPotValue" id="recipient-name">
+                                            <label for="recipient-name" class="col-form-label"
+                                                style="margin-bottom: 10px;">边（1，2）</label>
+                                            <input type="text" class="form-control aboutLineValue" id="recipient-name">
+                                            <span><button type="button" class="btn btn-light" id="lastPot"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-chevron-left"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                                    </svg></button></span>
+                                            <span><button type="button" class="btn btn-light" id="nextPot"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-chevron-right"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg></button></span>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary game_create"
+                                        data-bs-dismiss="modal">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </li>
+
+                <!-- 回退功能 -->
+                <li class="list-group-item" id="backOneStep"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z" />
+                    </svg>&nbsp;&nbsp;回退一步</li>
+
+                <!-- 重新开始功能 -->
+                <li class="list-group-item" id="restart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                        <path
+                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                        <path fill-rule="evenodd"
+                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                    </svg>&nbsp;&nbsp;重新开始</li>
+            </ul>
+        </div>
+
+        <!-- 图形信息 -->
+        <div class="info_box shadow">
+            <ul class="list-group" style="display: none;width: 100%;">
+                <div class="infoHead" id="score" style="height: 100px; margin-top: 10px;">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                        </svg>&nbsp;&nbsp;得分情况
+                    </div>
+                    <div class="getScore"><strong>·</strong>&nbsp;最终得分：</div>
+
+                    <div class="getRoute"><strong>·</strong>&nbsp;当前路径：</div>
+
+                </div>
+                <!-- 加个获取最优结果的按钮 -->
+                <button id="showResult">获取最优结果</button>
+                <div class="resultItem"></div>
+
+
+                <p style="margin-left: 10px;">节点信息</p>
+            </ul>
+        </div>
+
+        <!-- 多边形游戏区域 -->
+        <div class="game_box shadow">
+            <div class="picture shadow">
+                <svg width="100%" height="100%" style="background-color: white;" class="board">
+                </svg>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="JS/game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 251, 251);
+}
+
+.game_header {
+    text-align: center;
+    height: 54px;
+    line-height: 54px;
+    background-color: white;
+}
+
+.game_footer {
+    position: fixed;
+    top: 92%;
+    height: 8%;
+    background-color: white;
+}
